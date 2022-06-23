@@ -1,0 +1,121 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #ECFDF5;
+    font-family: Inter;
+}
+.generate-pw-container {
+    max-width: 600px;
+    margin:0 auto;
+    padding:1em;
+    height:100vh;
+  
+}
+
+.switchMode{
+    cursor: pointer;
+    float: right;
+    background-color: #273549;
+    color: white;
+    border-radius: 9px;
+    margin-right: 8px;
+    margin-top: 8px
+}
+
+.dark{
+    background-color: #222;
+    color: #e6e6e6;
+}
+
+ .display-passwords-container {
+     border-top: 1px solid #D5D4D8;
+ } 
+   
+.title {
+font-size: 40px;
+font-style: normal;
+font-weight: 800;
+line-height: 40px;
+letter-spacing: -0.05em;
+text-align: left;
+margin-bottom:0;
+}
+
+.title .accent-txt {
+    color:#55F991;
+    display:block;
+}
+
+.subtitle {
+font-weight: 400;
+font-size: 20px;
+line-height: 28px;
+color: #6B7280;
+margin-top:0;
+}
+
+
+.generate-passwords-btn,
+.change-password-length {
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+background: #10B981;
+color:#fff;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 9px 17px 9px 15px;
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+border-radius: 6px;
+
+}
+
+.actions {
+   display:flex;
+   justify-content: space-between; 
+}
+
+
+.display-passwords-container {
+display:flex;
+ max-width:600px;
+ grid-template-columns: repeat(2, auto);
+ grid-template-rows: repeat(2,auto);
+ grid-gap:1em;
+ margin: 4em auto;
+ padding:1.5em;
+ 
+}
+
+.pw-display{
+    display:flex;
+    justify-content:center; 
+    align-items:center; 
+    background:#273549;
+    height:2.5em;
+    width: auto;
+    color:#5DEF92;
+    margin:0.5em;
+    padding:0.4em 0.8em;
+    border-radius: 6px;
+}
+
+@media (max-width:450px){
+.display-passwords-container {
+    margin-top:1em;
+    display:flex;
+    flex-direction:column; 
+}
+.actions{
+    display:flex;
+    flex-direction: column;
+    margin: 1em;
+    align-items: center;
+}
+.actions > button {
+    margin:0.5em;
+    padding:0.4em 0.8em;
+}
+}
