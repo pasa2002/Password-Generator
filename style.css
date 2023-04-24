@@ -76,7 +76,6 @@ body{
     height:100%;
     width: 50%;
     border-radius: inherit;
-    background: #f1c80b;
 }
 
 .wrapper .pass-length{
@@ -130,4 +129,16 @@ body{
     text-transform: uppercase;
     margin: 0.94rem 0 1.3rem;
     border-radius:5px;
+}
+
+#weak{
+    background-color: rgb(45, 224, 22);
+}
+
+#medium{
+    background-color: #dbc920;
+}
+
+#strong{
+    background-color:#ff0000;
 }

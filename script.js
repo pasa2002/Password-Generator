@@ -9,11 +9,16 @@ let generateBtn = document.getElementById('gen-btn');
 let length = document.getElementById('show-password-length');
 let passwordBox = document.getElementById('password');
 let options = document.getElementsByClassName('option');
+let passIndicator = document.querySelector('.pass-indicator');
+
 
 function updateSlider() {
   let showPasswordLength = document.getElementById('show-password-length');
   showPasswordLength.innerHTML = lengthSlider.value; // Update innerHTML with the value of the slider
+  updatePassIndicator();
+  generatePassword();
 }
+updateSlider();
 lengthSlider.addEventListener('input', updateSlider); // Add event listener to call updateSlider() on input event
 
 function generatePassword() {
@@ -47,4 +52,17 @@ function copyPassword() {
   passwordBox.select();
   document.execCommand('copy');
   navigator.clipboard.writeText(passwordBox.value);
+}
+
+function updatePassIndicator(){
+  if(lengthSlider.value<=8){
+    passIndicator.id="weak";
+    console.log(passIndicator);
+  }else if(lengthSlider.value<=24){
+    passIndicator.id = "medium";
+    console.log(passIndicator);
+  }else{
+    passIndicator.id="strong";
+    console.log(passIndicator);
+  }
 }
