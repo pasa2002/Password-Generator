@@ -132,13 +132,13 @@ body{
 }
 
 #weak{
-    background-color: rgb(45, 224, 22);
+    background-color: rgb(224, 22, 22);
 }
 
 #medium{
-    background-color: #dbc920;
+    background-color: #d88303;
 }
 
 #strong{
-    background-color:#ff0000;
+    background-color:#2da000;
 }
