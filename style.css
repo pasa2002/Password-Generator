@@ -68,6 +68,7 @@ body{
     margin-top: 0.75rem;
     position: relative;
     border-radius:25px;
+    transition: ease-in-out 425ms;
 }
 
 .pass-indicator::before{
@@ -142,3 +143,5 @@ body{
 #strong{
     background-color:#2da000;
 }
+
+
