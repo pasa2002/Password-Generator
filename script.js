@@ -50,7 +50,6 @@ function generatePassword() {
 
 function copyPassword() {
   passwordBox.select();
-  document.execCommand('copy');
   navigator.clipboard.writeText(passwordBox.value);
 }
 
