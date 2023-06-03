@@ -7,7 +7,8 @@ let allchars = '';
 let lengthSlider = document.getElementById('length-slider');
 let generateBtn = document.getElementById('gen-btn');
 let length = document.getElementById('show-password-length');
-let passwordBox = document.getElementById('password');
+let passwordBoxOne = document.getElementById('passwordOne');
+let passwordBoxTwo = document.getElementById('passwordTwo');
 let options = document.getElementsByClassName('option');
 let passIndicator = document.querySelector('.pass-indicator');
 
@@ -22,7 +23,8 @@ updateSlider();
 lengthSlider.addEventListener('input', updateSlider); // Add event listener to call updateSlider() on input event
 
 function generatePassword() {
-  let password = '';
+  let passwordOne = '';
+    let passwordTwo = '';
   allchars = '';
   
   if (document.getElementById('lowercase').checked) {
@@ -41,27 +43,35 @@ function generatePassword() {
     allchars += symbols;
   }
   
-  while (lengthSlider.value > password.length) {
-    password += allchars[Math.floor(Math.random() * allchars.length)];
+  while (lengthSlider.value > passwordOne.length) {
+    passwordOne += allchars[Math.floor(Math.random() * allchars.length)];
+  }
+
+  while (lengthSlider.value > passwordTwo.length) {
+    passwordTwo += allchars[Math.floor(Math.random() * allchars.length)];
   }
   
-  passwordBox.value = password;
+
+  passwordBoxOne.value = passwordOne;
+  passwordBoxTwo.value = passwordTwo;
 }
 
-function copyPassword() {
-  passwordBox.select();
-  navigator.clipboard.writeText(passwordBox.value);
+function copyPasswordOne() {
+  passwordBoxOne.select();
+  navigator.clipboard.writeText(passwordBoxOne.value);
+}
+
+function copyPasswordTwo() {
+  passwordBoxTwo.select();
+  navigator.clipboard.writeText(passwordBoxTwo.value);
 }
 
 function updatePassIndicator(){
   if(lengthSlider.value<=8){
     passIndicator.id="weak";
-    console.log(passIndicator);
   }else if(lengthSlider.value<=24){
     passIndicator.id = "medium";
-    console.log(passIndicator);
   }else{
     passIndicator.id="strong";
-    console.log(passIndicator);
   }
 }

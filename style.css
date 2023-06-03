@@ -43,6 +43,10 @@ body{
     position: relative;
 }
 
+.input-box{
+    margin: 5px;
+}
+
 .input-box input{
     width: 100%;
     height: 53px;
